@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="제주대학교 제58대 DREAM 총학생회 · 2026 통합체전 종목별·종합 우승을 예측하고 DREAM POINT 받아가세요.">
+<meta property="og:title" content="2026 통합체전 승부예측 | DREAM 총학생회">
+<meta property="og:description" content="우승은 누구? 종목별·종합 우승 단과대학을 예측하고 DREAM POINT 10P 받아가세요. 9.30(수) 10시 마감">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0D4A44">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230D4A44'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23F39A2B' font-family='Arial' font-weight='700'%3ED%3C/text%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>2026 통합체전 승부예측</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#EEF5F2; --surface:#FFFFFF; --ink:#10302B; --muted:#557069; --line:#D3E4DE;
+  --field:#0D4A44; --field-2:#11605A; --brand:#3FA596; --brand-soft:#DCEFEA; --on-field:#F3FBF8;
+  --flare:#F39A2B; --flare-ink:#3A2100; --flare-soft:#FCEBD5;
+  --tile:#BBC1CF; --tile-ink:#FBFCFE; --lead:#DF8249;
+  --chip:#F4F9F7; --chip-line:#C9DDD6;
+  --shadow:0 1px 0 rgba(16,48,43,.06),0 8px 24px -16px rgba(16,48,43,.35);
+  --display:"Black Han Sans","IBM Plex Sans KR","Apple SD Gothic Neo",sans-serif;
+  --num:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#0A1F1C; --surface:#10302B; --ink:#E6F3EF; --muted:#8FB0A8; --line:#1F4640;
+    --field:#0F5A52; --field-2:#13706A; --brand:#5CC2B2; --brand-soft:#15443E;
+    --chip:#0D2825; --chip-line:#27514A; --flare:#F6A94A; --flare-soft:#3A2A14;
+    --tile:#26383B; --tile-ink:#8FA6A1; --lead:#E08A52;
+    --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#0A1F1C; --surface:#10302B; --ink:#E6F3EF; --muted:#8FB0A8; --line:#1F4640;
+  --field:#0F5A52; --field-2:#13706A; --brand:#5CC2B2; --brand-soft:#15443E;
+  --chip:#0D2825; --chip-line:#27514A; --flare:#F6A94A; --flare-soft:#3A2A14;
+    --tile:#26383B; --tile-ink:#8FA6A1; --lead:#E08A52;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 30px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{text-wrap:balance;margin:0}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--flare);outline-offset:2px;border-radius:6px}
+
+/* HERO — scoreboard */
+.hero{background:var(--field);color:var(--on-field);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 64px,transparent 64px 128px),
+    radial-gradient(circle at 88% 120%,transparent 0 118px,rgba(255,255,255,.12) 118px 120px,transparent 120px);}
+.hero .wrap{position:relative;padding-block:28px 34px;display:grid;gap:26px}
+.org{display:flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:.08em}
+.org-mark{width:30px;height:30px;border-radius:50%;background:var(--on-field);color:var(--field);display:grid;place-items:center;font-family:var(--num);font-weight:700;font-size:18px;letter-spacing:0}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:end}
+.kicker{font-family:var(--num);font-weight:600;letter-spacing:.24em;font-size:14px;color:#9FE0D4}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,8.4vw,92px);line-height:.98;letter-spacing:-.01em;margin-top:8px}
+.hero h1 span{color:var(--flare)}
+.hero p.lede{margin:14px 0 0;max-width:34em;color:#CBE7E0}
+.board{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 18px;display:grid;gap:12px}
+.board-label{font-size:12px;letter-spacing:.12em;color:#9FE0D4;font-weight:600}
+.clock{display:flex;gap:10px;align-items:flex-end}
+.clock div{display:grid;justify-items:center}
+.clock b{font-family:var(--num);font-weight:700;font-size:48px;line-height:1;font-variant-numeric:tabular-nums;background:rgba(255,255,255,.08);border-radius:8px;padding:4px 10px;min-width:64px;text-align:center}
+.clock small{font-size:11px;color:#9FE0D4;margin-top:4px;letter-spacing:.1em}
+.board-meta{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px;border-top:1px dashed rgba(255,255,255,.18);padding-top:10px}
+.board-meta dt{color:#9FE0D4}
+.board-meta dd{margin:0;font-variant-numeric:tabular-nums}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-block:22px 6px;list-style:none;margin:0}
+.steps li{display:flex;gap:12px;align-items:flex-start;padding:14px 4px}
+.steps .n{font-family:var(--num);font-weight:700;font-size:30px;line-height:1;color:var(--brand)}
+.steps strong{display:block;font-size:15px}
+.steps span{color:var(--muted);font-size:13.5px}
+
+/* STICKY BAR */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:14px;padding-block:10px}
+.meter{flex:1;display:grid;gap:5px;min-width:0}
+.meter-top{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+.meter-top b{color:var(--ink);font-family:var(--num);font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
+.track{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.track i{display:block;height:100%;width:0;background:var(--brand);border-radius:99px;transition:width .35s ease}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:10px;padding:11px 16px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;cursor:pointer}
+.btn-go{background:var(--flare);color:var(--flare-ink)}
+.btn-go[aria-disabled="true"]{background:var(--line);color:var(--muted);pointer-events:none}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}
+
+/* SECTIONS */
+section{padding-block:34px 8px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.1}
+.sec-head p{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+/* SPORT CARDS */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:12px;box-shadow:var(--shadow);transition:border-color .2s}
+.card.done{border-color:var(--brand)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.card h3{font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px}
+.ico{width:32px;height:32px;border-radius:9px;background:var(--brand-soft);display:grid;place-items:center;font-size:17px}
+.when{font-size:12px;color:var(--muted);text-align:right;line-height:1.35;font-variant-numeric:tabular-nums}
+.when b{display:block;font-family:var(--num);font-size:16px;color:var(--ink);font-weight:600;letter-spacing:.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--chip-line);background:var(--chip);color:var(--ink);border-radius:999px;padding:7px 14px;font-weight:600;font-size:14px;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
+.chip:hover{border-color:var(--brand)}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.note{font-size:12.5px;color:var(--muted);margin:-4px 0 0}
+
+/* OVERALL */
+.overall{background:var(--field);color:var(--on-field);border-radius:18px;padding:22px;display:grid;gap:16px;position:relative;overflow:hidden}
+.overall::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px solid rgba(255,255,255,.1)}
+.overall h3{font-family:var(--display);font-weight:400;font-size:28px}
+.overall p{margin:0;color:#CBE7E0;font-size:14px}
+.big-chips{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative;z-index:1}
+.big-chips .chip{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.2);color:var(--on-field);border-radius:10px;padding:12px 6px;text-align:center}
+.big-chips .chip:hover{border-color:var(--flare)}
+.big-chips .chip[aria-pressed="true"]{background:var(--flare);border-color:var(--flare);color:var(--flare-ink)}
+
+/* SUBMIT */
+.submit{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.submit p{margin:0;font-size:14px;color:var(--muted);max-width:44em}
+.submit p b{color:var(--ink)}
+
+/* SCHEDULE */
+.tabs{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:3px;gap:3px}
+.tab{border:0;background:transparent;padding:8px 14px;border-radius:8px;font-weight:600;color:var(--muted);cursor:pointer;font-size:14px}
+.tab[aria-selected="true"]{background:var(--field);color:var(--on-field)}
+.sched{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row{display:grid;grid-template-columns:64px 104px 1fr auto;gap:12px;align-items:center;padding:11px 16px;border-top:1px solid var(--line);font-size:14px}
+.row:first-child{border-top:0}
+.row time{font-family:var(--num);font-weight:600;font-size:17px;font-variant-numeric:tabular-nums}
+.row .sp{color:var(--muted);font-weight:500}
+.row .mt{font-weight:600}
+.row .mt em{font-style:normal;color:var(--muted);font-weight:500;margin:0 6px;font-size:12px}
+.tag{font-size:11.5px;padding:3px 8px;border-radius:6px;background:var(--brand-soft);color:var(--ink);font-weight:600;white-space:nowrap}
+.tag.gym{background:var(--flare-soft)}
+.tag.final{background:var(--flare);color:var(--flare-ink)}
+.row.cer{background:var(--paper);color:var(--muted)}
+
+footer{padding-block:40px 36px;color:var(--muted);font-size:13px;text-align:left}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-size:14px;transition:.25s;pointer-events:none;z-index:9}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:760px){
+  .hero-grid,.grid,.steps{grid-template-columns:1fr}
+  .steps{gap:0}.steps li{padding:8px 4px}
+  .big-chips{grid-template-columns:repeat(3,1fr)}
+  .clock b{font-size:38px;min-width:52px}
+  .row{grid-template-columns:54px 1fr auto;row-gap:2px}
+  .row .sp{grid-column:2;grid-row:1;font-size:12.5px}
+  .row .mt{grid-column:2;grid-row:2}
+  .row time{grid-row:1/3}
+  .row .tag{grid-row:1/3;grid-column:3}
+  .bar .meter-top span:first-child{display:none}
+}
+
+.pt{color:var(--flare);font-weight:700}
+.prize{display:grid;grid-template-columns:1.1fr 1fr;gap:14px}
+.podium{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.podium li{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:center;padding:13px 16px;border-top:1px solid var(--line)}
+.podium li:first-child{border-top:0}
+.rk{font-family:var(--num);font-weight:700;font-size:19px;letter-spacing:.02em}
+.p1 .rk{color:var(--flare)}
+.pz{font-weight:600}
+.ct{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pa{background:var(--brand-soft)}
+.pa .rk{font-family:var(--body);font-size:14px}
+.rules{margin:0;padding:16px 18px 16px 34px;background:var(--surface);border:1px solid var(--line);border-radius:14px;display:grid;gap:8px;font-size:14px;color:var(--muted)}
+.rules li::marker{color:var(--brand)}
+@media (max-width:760px){.prize{grid-template-columns:1fr}.podium li{grid-template-columns:78px 1fr auto}}
+
+.chip.has-pct{background:linear-gradient(90deg,var(--brand-soft) var(--p),var(--chip) var(--p));display:inline-flex;align-items:center;gap:8px}
+.chip .pc{font-family:var(--num);font-weight:600;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"].has-pct{background:linear-gradient(90deg,color-mix(in srgb,var(--brand) 78%,#000) var(--p),var(--brand) var(--p))}
+.chip[aria-pressed="true"] .pc{color:rgba(255,255,255,.85)}
+.big-chips .chip.has-pct{background:linear-gradient(0deg,rgba(255,255,255,.16) var(--p),rgba(255,255,255,.06) var(--p));flex-direction:column;gap:2px;justify-content:center}
+.big-chips .chip .pc{color:#9FE0D4}
+.big-chips .chip[aria-pressed="true"].has-pct{background:var(--flare)}
+.big-chips .chip[aria-pressed="true"] .pc{color:var(--flare-ink)}
+.live{display:flex;align-items:center;gap:8px;font-size:13px;color:#CBE7E0;border-top:1px dashed rgba(255,255,255,.18);padding-top:10px}
+.live b{font-family:var(--num);font-size:20px;color:var(--on-field);font-variant-numeric:tabular-nums}
+.live .lt{margin-left:auto;color:#9FE0D4;font-size:12px}
+.live .dot{width:8px;height:8px;border-radius:50%;background:var(--flare);box-shadow:0 0 0 0 rgba(243,154,43,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(243,154,43,0)}100%{box-shadow:0 0 0 0 rgba(243,154,43,0)}}
+
+
+.vs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.vs-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;display:grid;gap:12px;box-shadow:var(--shadow)}
+.vs-card.big{grid-column:1/-1}
+.vs-hd{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.vs-hd h3{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
+.vs-n{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.vs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vs-tile{border-radius:16px;padding:16px 18px;min-height:104px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.vs-tile .vn{font-weight:700;font-size:15px}
+.vs-tile .vp{font-family:var(--num);font-weight:700;font-size:40px;line-height:.9;letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.vs-tile.a{background:var(--lead);color:#fff;box-shadow:0 14px 26px -16px rgba(223,130,73,.95),inset 0 0 0 1px rgba(255,255,255,.2)}
+.vs-tile.b{background:var(--tile);color:var(--tile-ink);align-items:flex-end;text-align:right}
+.vs-tile.b .vp{color:#F6D3D6}
+.vs-tile.a.empty{background:var(--tile);box-shadow:none;color:var(--tile-ink)}
+.vs-pill{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--surface);color:var(--ink);font-weight:800;font-size:13px;letter-spacing:.06em;padding:9px 13px;border-radius:999px;box-shadow:0 4px 14px rgba(16,48,43,.18)}
+.vs-rest{margin:0;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;line-height:1.5}
+.vs-upd{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.vs-empty{margin:0 0 14px;padding:12px 14px;border-radius:12px;background:var(--brand-soft);font-size:14px}
+@media (max-width:760px){.vs-grid{grid-template-columns:1fr}.vs-tile .vp{font-size:34px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="wrap">
+    <div class="org"><span class="org-mark">D</span>제주대학교 제58대 DREAM 총학생회</div>
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">2026 · PREDICTION CHALLENGE</div>
+        <h1>우승은 누구?<br><span>승부예측</span> 이벤트</h1>
+        <p class="lede">10개 종목 우승팀과 종합 우승 단과대학을 예측해 주세요. 참여만 해도 <b class="pt">DREAM POINT 10P</b>, 가장 많이 맞힌 10명에게는 경품을 드려요.</p>
+      </div>
+      <div class="board" aria-live="polite">
+        <div class="board-label" id="clockLabel">예측 마감까지</div>
+        <div class="clock" id="clock">
+          <div><b id="cd">0</b><small>DAY</small></div>
+          <div><b id="ch">00</b><small>HOUR</small></div>
+          <div><b id="cm">00</b><small>MIN</small></div>
+        </div>
+        <dl class="board-meta">
+          <dt>마감</dt><dd>9.30(수) 10:00 개막식까지</dd>
+          <dt>경기</dt><dd>9.30(수) – 10.1(목)</dd>
+          <dt>장소</dt><dd>대운동장 · 체육관</dd>
+        </dl>
+        <div class="live" id="live" hidden><span class="dot"></span>지금까지 <b id="liveN">0</b>명 참여 <span class="lt" id="liveT"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <ol class="steps">
+    <li><span class="n">1</span><div><strong>우승팀 예측하기</strong><span>이 사이트에서 종목별 우승 10개와 종합 우승 1개를 골라요</span></div></li>
+    <li><span class="n">2</span><div><strong>참여자 정보 입력</strong><span>제출하기를 누르면 내 예측이 담긴 참여 페이지가 열려요. 성명·학과·학번·단과대학·연락처를 적어주세요</span></div></li>
+    <li><span class="n">3</span><div><strong>최종 제출</strong><span>참여 페이지 마지막의 ‘제출’ 버튼까지 눌러야 참여가 완료돼요</span></div></li>
+  </ol>
+</div>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="meter">
+      <div class="meter-top"><span>내 예측</span><span><b id="cnt">0</b> / 11 선택</span></div>
+      <div class="track"><i id="fill"></i></div>
+    </div>
+    <a class="btn btn-go" id="goTop" href="#" target="_blank" rel="noopener" aria-disabled="true">제출하기 →</a>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="pick">
+    <div class="sec-head">
+      <div><h2>종목별 우승 예측</h2><p>본선 대진표에 오른 팀만 고를 수 있어요.</p></div>
+      <button class="btn btn-ghost" id="reset" type="button">선택 초기화</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="overall-sec">
+    <div class="overall">
+      <div><h3>종합 우승 단과대학</h3><p>이틀간의 점수를 모두 합쳐 1위를 차지할 단과대학은?</p></div>
+      <div class="big-chips" id="overall" role="group" aria-label="종합 우승 단과대학"></div>
+    </div>
+    <div class="submit">
+      <p id="submitMsg"><b>11개를 모두 고르면</b> 제출 버튼이 열려요. 이어서 참여자 정보만 입력하면 끝!</p>
+      <a class="btn btn-go" id="go" href="#" target="_blank" rel="noopener" aria-disabled="true">예측 제출하기 →</a>
+    </div>
+  </section>
+
+  <section id="board">
+    <div class="sec-head">
+      <div><h2>실시간 예측 현황</h2><p>학우들이 가장 많이 고른 1위와 2위예요. 예측이 제출되면 바로 반영돼요.</p></div>
+      <span class="vs-upd" id="vsUpd"></span>
+    </div>
+    <p class="vs-empty" id="vsEmpty">첫 예측이 들어오면 종목별 1·2위 비율이 여기에 표시돼요.</p>
+    <div class="vs-grid" id="vsGrid"></div>
+  </section>
+
+  <section id="prize">
+    <div class="sec-head"><div><h2>경품 · 유의사항</h2><p>적중 개수가 가장 많은 참여자 10명을 뽑아요. 동점이면 추첨해요.</p></div></div>
+    <div class="prize">
+      <ol class="podium">
+        <li class="p1"><span class="rk">1등</span><span class="pz">공개 예정</span><span class="ct">1명</span></li>
+        <li class="p2"><span class="rk">2등</span><span class="pz">공개 예정</span><span class="ct">1명</span></li>
+        <li class="p3"><span class="rk">3등</span><span class="pz">공개 예정</span><span class="ct">1명</span></li>
+        <li class="p4"><span class="rk">4–10등</span><span class="pz">공개 예정</span><span class="ct">7명</span></li>
+        <li class="pa"><span class="rk">참여자 전원</span><span class="pz">DREAM POINT 10P</span><span class="ct">전원</span></li>
+      </ol>
+      <ul class="rules">
+        <li>1인 1회만 참여할 수 있어요. 중복 참여 시 모든 참여가 무효 처리될 수 있어요.</li>
+        <li>최종 제출한 뒤에는 수정할 수 없어요.</li>
+        <li>학번(10자리)·연락처 등을 잘못 적으면 참여에서 제외될 수 있어요.</li>
+        <li>개인정보 수집·이용에 동의하지 않으면 참여할 수 없어요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="sec-head">
+      <div><h2>경기 일정</h2><p>본선 대진표 기준 · 경기 상황에 따라 바뀔 수 있어요.</p></div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="t1" aria-selected="true" type="button">1일차 9.30(수)</button>
+        <button class="tab" role="tab" id="t2" aria-selected="false" type="button">2일차 10.1(목)</button>
+      </div>
+    </div>
+    <div class="sched" id="sched" role="tabpanel"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>제주대학교 제58대 DREAM 총학생회 · 2026 통합체전</span><span>많은 관심과 참여 부탁드립니다</span></div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const FORM = "https://docs.google.com/forms/d/e/1FAIpQLScVDN2_TM0YJsQJGgepGZAGIox-96jcj_ttFt8Ngzq4xQYFtg/viewform";
+const DEADLINE = new Date("2026-09-30T10:00:00+09:00");
+const COLLEGES = ["의과대","자유전공","간호대","공과대","자연대","경상대","해양대","인문대","예디대","사범대","생명대","사회대"];
+const SPORTS = [
+  {id:"soccer", name:"축구", ico:"⚽", entry:1050813175, final:"10.1 12:00", place:"대운동장", teams:["사회대A","경상대B","경상대A","생명대A"]},
+  {id:"jokgu", name:"족구", ico:"🦶", entry:768227976, final:"10.1 14:00", place:"대운동장", teams:["경상대A","공과대A","해양대A","경상대B"]},
+  {id:"basket", name:"농구", ico:"🏀", entry:186847629, final:"10.1 10:00", place:"체육관", teams:["생명대","해양대","의과대","사범대"]},
+  {id:"dodge", name:"피구", ico:"🔴", entry:1330203304, final:"10.1 15:30", place:"대운동장", teams:["경상대","자연대","생명대","인문대"]},
+  {id:"kickball", name:"발야구", ico:"⚾", entry:1716890239, final:"10.1 17:00", place:"대운동장", teams:["경상대","해양대","공과대","사회대"]},
+  {id:"pk", name:"승부차기", ico:"🥅", entry:749846826, final:"10.1 16:30", place:"대운동장", teams:["사범대","해양대","경상대","자연대"]},
+  {id:"badminton", name:"배드민턴", ico:"🏸", entry:582943409, final:"10.1 13:00", place:"체육관", teams:["공과대","간호대","해양대","인문대"]},
+  {id:"tug", name:"줄다리기", ico:"🪢", entry:1933020164, final:"10.1 15:00", place:"대운동장", teams:["자연대","사범대","해양대","공과대","경상대","인문대","생명대","사회대","자유전공"], note:"자유전공은 부전승으로 2라운드부터 출전"},
+  {id:"rope", name:"8자 줄넘기", ico:"➰", entry:1982322691, final:"10.1 11:00", place:"대운동장", teams:["자연대","자유전공","사회대","해양대","경상대","공과대","사범대","생명대","인문대"], note:"A조 5팀 · B조 4팀"},
+  {id:"relay", name:"계주", ico:"🏃", entry:1816437744, final:"10.1 18:00", place:"대운동장", teams:COLLEGES, note:"9.30 18:00 예선 (A·B조) → 10.1 결승"},
+];
+const OVERALL_ENTRY = 1549457482;
+const OVERALL = COLLEGES.concat(["교육대학","수의대","약학대"]);
+const TOTAL = SPORTS.length + 1;
+
+const DAYS = {
+  t1: [
+    ["09:00","","개막식","", "cer"],
+    ["10:00","축구","사회대A|경상대B","대운동장"],
+    ["10:30","줄다리기","자연대|사범대","대운동장"],
+    ["11:00","줄다리기","해양대|공과대","대운동장"],
+    ["11:30","축구","경상대A|생명대A","대운동장"],
+    ["13:00","승부차기","사범대|해양대","대운동장"],
+    ["13:00","줄다리기","경상대|인문대","대운동장"],
+    ["13:30","줄다리기","생명대|사회대","대운동장"],
+    ["14:00","족구","경상대A|공과대A","대운동장"],
+    ["14:00","발야구","경상대|해양대","대운동장"],
+    ["15:00","족구","해양대A|경상대B","대운동장"],
+    ["15:00","발야구","공과대|사회대","대운동장"],
+    ["16:00","농구","생명대|해양대","체육관"],
+    ["16:00","피구","경상대|자연대","대운동장"],
+    ["16:00","줄다리기","인문대 승리 시|자유전공","대운동장"],
+    ["17:00","농구","의과대|사범대","체육관"],
+    ["17:00","피구","생명대|인문대","대운동장"],
+    ["17:00","줄다리기","경상대 승리 시|자유전공","대운동장"],
+    ["17:30","승부차기","경상대|자연대","대운동장"],
+    ["18:00","계주","예선 A조 · B조 (전 단과대)","대운동장"],
+  ],
+  t2: [
+    ["09:00","배드민턴","공과대|간호대","체육관"],
+    ["09:00","배드민턴","해양대|인문대","체육관"],
+    ["10:00","농구","결승","체육관","final"],
+    ["11:00","8자 줄넘기","A조 · B조","대운동장"],
+    ["11:30","줄다리기","준결승 6·7경기","대운동장"],
+    ["12:00","축구","결승","대운동장","final"],
+    ["13:00","배드민턴","결승","체육관","final"],
+    ["14:00","족구","결승","대운동장","final"],
+    ["15:00","줄다리기","결승","대운동장","final"],
+    ["15:30","피구","결승","대운동장","final"],
+    ["16:30","승부차기","결승","대운동장","final"],
+    ["17:00","발야구","결승","대운동장","final"],
+    ["18:00","계주","결승","대운동장","final"],
+    ["18:30","","폐막식","","cer"],
+  ]
+};
+
+let picks = {};
+try { picks = JSON.parse(localStorage.getItem("dream-cup-picks") || "{}") || {}; } catch(e) { picks = {}; }
+const save = () => { try { localStorage.setItem("dream-cup-picks", JSON.stringify(picks)); } catch(e) {} };
+
+const el = (tag, attrs={}, text) => { const n=document.createElement(tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (text!=null) n.textContent=text; return n; };
+
+const STATS_API = "https://script.google.com/macros/s/AKfycbwJP9x8B8_urRiuZvsAPzhvDXYKOFvXgcQrfXXPXpy3GEme4z-lHCEnJloHadJZyV2WaQ/exec";
+let STATS = null;
+function pctOf(key, value){
+  if (!STATS || !STATS.counts || !STATS.counts[key]) return null;
+  const c = STATS.counts[key]; const sum = Object.values(c).reduce((a,b)=>a+b,0);
+  if (!sum) return null;
+  return Math.round((c[value]||0)/sum*100);
+}
+function chip(group, value){
+  const b = el("button", {type:"button", class:"chip", "aria-pressed": String(picks[group]===value)}, value);
+  b.addEventListener("click", () => {
+    picks[group] = picks[group]===value ? undefined : value;
+    if (picks[group]===undefined) delete picks[group];
+    save(); render();
+  });
+  return b;
+}
+
+function ranked(key, teams){
+  const c = (STATS && STATS.counts && STATS.counts[key]) || {};
+  const sum = Object.values(c).reduce((a,b)=>a+b,0);
+  return { sum, list: teams.map(t => ({t, n:c[t]||0, p: sum ? Math.round((c[t]||0)/sum*100) : 0})).sort((a,b)=>b.n-a.n) };
+}
+function renderBoard(){
+  const box = document.getElementById("vsGrid"); if (!box) return;
+  box.textContent = "";
+  const closed = Date.now() >= DEADLINE.getTime();
+  const items = SPORTS.map(s => ({name:s.name, ico:s.ico, teams:s.teams})).concat([{name:"종합 우승", key:"종합", ico:"👑", teams:OVERALL, big:true}]);
+  let any = false;
+  items.forEach(it => {
+    const r = ranked(it.key || it.name, it.teams);
+    const card = el("article",{class:"vs-card"+(it.big?" big":"")});
+    const hd = el("div",{class:"vs-hd"});
+    const h = el("h3"); h.append(el("span",{class:"ico","aria-hidden":"true"}, it.ico), document.createTextNode(it.name));
+    hd.append(h, el("span",{class:"vs-n"}, r.sum ? r.sum.toLocaleString("ko-KR")+"표" : "예측 대기"));
+    card.append(hd);
+    const vs = el("div",{class:"vs"});
+    const a = r.list[0], b = r.list[1];
+    const ta = el("div",{class:"vs-tile a"+(r.sum?"":" empty")}); ta.append(el("span",{class:"vn"}, r.sum ? a.t : "1위"), el("span",{class:"vp"}, r.sum ? a.p+"%" : "–"));
+    const tb = el("div",{class:"vs-tile b"}); tb.append(el("span",{class:"vn"}, r.sum ? b.t : "2위"), el("span",{class:"vp"}, r.sum ? b.p+"%" : "–"));
+    vs.append(ta, el("span",{class:"vs-pill"}, closed ? "마감" : "LIVE"), tb);
+    card.append(vs);
+    if (r.sum) {
+      any = true;
+      const rest = r.list.slice(2).filter(x=>x.n>0);
+      if (rest.length) card.append(el("p",{class:"vs-rest"}, "그 외  " + rest.map(x=>x.t+" "+x.p+"%").join(" · ")));
+    }
+    box.append(card);
+  });
+  document.getElementById("vsEmpty").hidden = any;
+}
+
+function render(){
+  const grid = document.getElementById("grid"); grid.textContent = "";
+  SPORTS.forEach(s => {
+    const c = el("article", {class:"card"+(picks[s.id]?" done":"")});
+    const top = el("div",{class:"card-top"});
+    const h = el("h3"); h.append(el("span",{class:"ico","aria-hidden":"true"}, s.ico), document.createTextNode(s.name));
+    const w = el("div",{class:"when"}); w.append(el("b",{},"결승 "+s.final), document.createTextNode(s.place));
+    top.append(h,w); c.append(top);
+    if (s.note) c.append(el("p",{class:"note"}, s.note));
+    const chips = el("div",{class:"chips",role:"group","aria-label":s.name+" 우승 예측"});
+    s.teams.forEach(t => chips.append(chip(s.id, t)));
+    c.append(chips); grid.append(c);
+  });
+  const ov = document.getElementById("overall"); ov.textContent = "";
+  OVERALL.forEach(t => ov.append(chip("overall", t)));
+  renderBoard();
+  renderLive();
+
+  const n = SPORTS.filter(s=>picks[s.id]).length + (picks.overall?1:0);
+  document.getElementById("cnt").textContent = n;
+  document.getElementById("fill").style.width = (n/TOTAL*100)+"%";
+  const ready = n===TOTAL && Date.now() < DEADLINE.getTime();
+  const url = buildUrl();
+  ["go","goTop"].forEach(id => { const a=document.getElementById(id); a.href = ready?url:"#"; a.setAttribute("aria-disabled", String(!ready)); });
+  const msg = document.getElementById("submitMsg");
+  if (Date.now() >= DEADLINE.getTime()) msg.innerHTML = "<b>예측이 마감됐어요.</b> 결과는 총학생회 SNS에서 발표됩니다.";
+  else if (n===TOTAL) msg.innerHTML = "<b>모두 골랐어요!</b> 제출하기를 누르면 내 예측이 담긴 참여 페이지가 새 탭으로 열려요. 개인정보 동의와 성명·학과·학번(10자리)·단과대학·연락처를 입력하고 마지막 ‘제출’ 버튼까지 눌러주세요.";
+  else msg.innerHTML = "<b>"+(TOTAL-n)+"개 더 고르면</b> 제출 버튼이 열려요. 이어서 참여자 정보만 입력하면 끝!";
+}
+
+function buildUrl(){
+  const p = new URLSearchParams({usp:"pp_url"});
+  SPORTS.forEach(s => { if (picks[s.id]) p.append("entry."+s.entry, picks[s.id]); });
+  if (picks.overall) p.append("entry."+OVERALL_ENTRY, picks.overall);
+  return FORM + "?" + p.toString();
+}
+
+function renderDay(key){
+  const box = document.getElementById("sched"); box.textContent="";
+  DAYS[key].forEach(([t,sp,mt,pl,kind]) => {
+    const r = el("div",{class:"row"+(kind==="cer"?" cer":"")});
+    r.append(el("time",{},t), el("span",{class:"sp"}, sp||"행사"));
+    const m = el("span",{class:"mt"});
+    const parts = mt.split("|");
+    m.append(document.createTextNode(parts[0]));
+    if (parts[1]) { m.append(el("em",{},"VS"), document.createTextNode(parts[1])); }
+    r.append(m);
+    if (kind==="final") r.append(el("span",{class:"tag final"},"결승 · "+pl));
+    else if (pl) r.append(el("span",{class:"tag"+(pl==="체육관"?" gym":"")}, pl));
+    else r.append(el("span"));
+    box.append(r);
+  });
+  ["t1","t2"].forEach(id => document.getElementById(id).setAttribute("aria-selected", String(id===key)));
+}
+document.getElementById("t1").onclick = () => renderDay("t1");
+document.getElementById("t2").onclick = () => renderDay("t2");
+
+document.getElementById("reset").onclick = () => { picks = {}; save(); render(); toast("선택을 모두 지웠어요"); };
+["go","goTop"].forEach(id => document.getElementById(id).addEventListener("click", e => {
+  if (e.currentTarget.getAttribute("aria-disabled")==="true") { e.preventDefault(); return; }
+  toast("참여 페이지가 새 탭으로 열려요 · 마지막 ‘제출’까지 꼭 눌러주세요");
+}));
+
+let tt; function toast(t){ const n=document.getElementById("toast"); n.textContent=t; n.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>n.classList.remove("on"),2600); }
+
+function tick(){
+  const ms = DEADLINE.getTime() - Date.now();
+  if (ms <= 0) { document.getElementById("clockLabel").textContent = "예측 마감"; ["cd","ch","cm"].forEach(i=>document.getElementById(i).textContent="00"); return; }
+  const m = Math.floor(ms/60000);
+  document.getElementById("cd").textContent = Math.floor(m/1440);
+  document.getElementById("ch").textContent = String(Math.floor(m%1440/60)).padStart(2,"0");
+  document.getElementById("cm").textContent = String(m%60).padStart(2,"0");
+}
+tick(); setInterval(tick, 15000);
+
+function renderLive(){
+  const box = document.getElementById("live"); if (!box) return;
+  if (!STATS) { box.hidden = true; return; }
+  box.hidden = false;
+  document.getElementById("liveN").textContent = (STATS.total||0).toLocaleString("ko-KR");
+  const d = new Date(STATS.updated);
+  const lbl = isNaN(d) ? "" : d.toLocaleTimeString("ko-KR",{timeZone:"Asia/Seoul",hour:"2-digit",minute:"2-digit"})+" 기준";
+  document.getElementById("liveT").textContent = lbl;
+  document.getElementById("vsUpd").textContent = STATS.total ? "참여 "+STATS.total.toLocaleString("ko-KR")+"명 · "+lbl : "";
+}
+async function loadStats(){
+  try {
+    const r = await fetch(STATS_API, {cache:"no-store"});
+    if (!r.ok) return;
+    const j = await r.json();
+    if (!STATS || j.updated !== STATS.updated) { STATS = j; render(); }
+  } catch(e) {}
+}
+loadStats(); setInterval(loadStats, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) loadStats(); });
+render(); renderDay("t1");
+</script>
+
+</body>
+</html>

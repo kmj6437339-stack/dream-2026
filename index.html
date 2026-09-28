@@ -224,7 +224,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <header class="hero">
   <div class="wrap">
-    <div class="org"><span class="org-mark">D</span>제주대학교 제58대 DREAM 총학생회</div>
+    <div class="org">제주대학교 제58대 DREAM 총학생회</div>
     <div class="hero-grid">
       <div>
         <div class="kicker">2026 · PREDICTION CHALLENGE</div>
@@ -432,7 +432,7 @@ function renderBoard(){
     const r = ranked(it.key || it.name, it.teams);
     const card = el("article",{class:"vs-card"+(it.big?" big":"")});
     const hd = el("div",{class:"vs-hd"});
-    const h = el("h3"); h.append(el("span",{class:"ico","aria-hidden":"true"}, it.ico), document.createTextNode(it.name));
+    const h = el("h3"); h.append(document.createTextNode(it.name));
     hd.append(h, el("span",{class:"vs-n"}, r.sum ? r.sum.toLocaleString("ko-KR")+"표" : "예측 대기"));
     card.append(hd);
     const vs = el("div",{class:"vs"});
@@ -456,7 +456,7 @@ function render(){
   SPORTS.forEach(s => {
     const c = el("article", {class:"card"+(picks[s.id]?" done":"")});
     const top = el("div",{class:"card-top"});
-    const h = el("h3"); h.append(el("span",{class:"ico","aria-hidden":"true"}, s.ico), document.createTextNode(s.name));
+    const h = el("h3"); h.append(document.createTextNode(s.name));
     const w = el("div",{class:"when"}); w.append(el("b",{},"결승 "+s.final), document.createTextNode(s.place));
     top.append(h,w); c.append(top);
     if (s.note) c.append(el("p",{class:"note"}, s.note));
